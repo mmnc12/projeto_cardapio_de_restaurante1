@@ -5,9 +5,7 @@ import estilos from "./campoDeBusca.module.css";
 import lupa from "../../../../public/lupa.png";
 import { buscaProduto, retornaProdutos } from "@/app/servico";
 
-export default function CampoDeBusca({ setListaProduto, setBotaoClicado }) {
-
-  const [textoBusca, setTextoBusca] = useState("");
+export default function CampoDeBusca({ setListaProduto, setBotaoClicado, textoBusca, setTextoBusca }) {
 
   const handleBuscaProduto = (textoDigitado) => {
     setTextoBusca(textoDigitado);

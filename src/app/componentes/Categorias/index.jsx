@@ -9,12 +9,13 @@ import bebidas from "../../../../public/bebidas.png";
 import salada from "../../../../public/salada.png";
 import sobremesa from "../../../../public/sobremesa.png";
 import { filtraCategoria } from "@/app/servico";
-export default function Categorias({ setListaProduto, botaoClicado, setBotaoClicado }) {
+export default function Categorias({ setListaProduto, botaoClicado, setBotaoClicado, setTextoBusca }) {
 
 
   const handleFiltrarProdutoCategoria = (categoria) => {
     setBotaoClicado(categoria);
     setListaProduto(filtraCategoria(categoria));
+    setTextoBusca("");
   };
 
   return (

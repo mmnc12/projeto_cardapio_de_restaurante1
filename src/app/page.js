@@ -20,6 +20,8 @@ export default function Home() {
 
   const [botaoClicado, setBotaoClicado] = useState(null);
 
+  const [textoBusca, setTextoBusca] = useState("");
+
 
   return (
     <div className={estilos.page}>
@@ -35,12 +37,15 @@ export default function Home() {
           setListaProduto={setListaProduto}
           setBotaoClicado={setBotaoClicado}
           botaoClicado={botaoClicado}
+          setTextoBusca={setTextoBusca}
           className={estilos.container_categoria}
         />
 
         <CampoDeBusca
           setListaProduto={setListaProduto}
           setBotaoClicado={setBotaoClicado}
+          textoBusca={textoBusca}
+          setTextoBusca={setTextoBusca}
         />
         <div className={estilos.maim}>
           <section className={estilos.secao_cards}>
